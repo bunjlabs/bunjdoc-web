@@ -1,30 +1,31 @@
 <script>
-	export let name;
+import Header from "./Header.svelte";
+
+import Editor from "./Editor.svelte";
+
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Header />
+	<Editor />
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		width: 100vw;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	:global(*, body, html) {
+		margin: 0;
+		padding: 0;
+
+		box-sizing: border-box;
+
+		--black: #000000ff;
+		--oxford-blue: #14213dff;
+		--orange-web: #fca311ff;
+		--platinum: #e5e5e5ff;
+		--white: #ffffffff;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
